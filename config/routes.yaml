@@ -1,3 +1,111 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+app_admin:
+    path: /admin
+    controller: App\Controller\AdminController::index
+
+
+app_product_new:
+    path: /product/new
+    controller: App\Controller\ProductController::new
+    methods: ['GET', 'POST']
+
+app_product_index:
+    path: /product
+    controller: App\Controller\ProductController::index
+    methods: ['GET']
+
+app_product_show:
+    path: /product/{id}
+    controller: App\Controller\ProductController::show
+    methods: ['GET']
+
+app_product_edit:
+    path: /product/{id}/edit
+    controller: App\Controller\ProductController::edit
+    methods: ['GET', 'POST']
+
+app_product_delete:
+    path: /product/{id}
+    controller: App\Controller\ProductController::delete
+    methods: ['POST']
+
+app_category_new:
+    path: /category/new
+    controller: App\Controller\CategoryController::new
+    methods: ['GET', 'POST']
+
+app_category_index:
+    path: /category
+    controller: App\Controller\CategoryController::index
+    methods: ['GET']
+
+app_category_show:
+    path: /category/{id}
+    controller: App\Controller\CategoryController::show
+    methods: ['GET']
+
+app_category_edit:
+    path: /category/{id}/edit
+    controller: App\Controller\CategoryController::edit
+    methods: ['GET', 'POST']
+
+app_category_delete:
+    path: /category/{id}
+    controller: App\Controller\CategoryController::delete
+    methods: ['POST']
+
+app_user_index:
+    path: /user
+    controller: App\Controller\UserController::index
+    methods: ['GET']
+
+app_user_show:
+    path: /user/{id}
+    controller: App\Controller\UserController::index
+    methods: ['GET']
+
+app_user_delete:
+    path: /User/{id}
+    controller: App\Controller\UserController::delete
+    methods: ['POST']
+
+app_client_index:
+    path: /client
+    controller: App\Controller\DetailsController::index
+
+app_client_details:
+    path: /client/details/{id}
+    controller: App\Controller\ClientController::details
+
+cart_:
+    path: /cart
+    controller: App\Controller\CartController::index
+    methods: ['GET']
+
+cart_add:
+    path: /cart/add{id}
+    controller: App\Controller\CartController::add
+
+
+app_command_delete:
+    path: /command/{id}
+    controller: App\Controller\CommandController::delete
+    methods: ['POST']
+
+# app_command:
+# path: /command/
+# controller: App/Controller/CommandController:index
+
